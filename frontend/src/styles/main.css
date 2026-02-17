@@ -1,0 +1,548 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+}
+
+.landing-bg {
+  background: linear-gradient(180deg, #e8faf5, #f6fffc);
+  min-height: 100vh;
+}
+
+/* ===================== NAVBAR ===================== */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 40px;
+}
+
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.menu-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: #1ec7a6;
+  color: white;
+  display: grid;
+  place-items: center;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.brand-logo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.brand-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #052e26;
+}
+
+.nav-center a {
+  margin: 0 18px;
+  text-decoration: none;
+  color: #052e26;
+  font-weight: 500;
+}
+
+.nav-center a:hover {
+  text-decoration: underline;
+}
+
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+/* LOGIN BUTTON */
+.login-btn {
+  background: #1ec7a6;
+  color: #052e26;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 999px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===================== LOGIN MODAL ===================== */
+.login-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  display: grid;
+  place-items: center;
+  z-index: 1000;
+}
+
+.login-card {
+  background: white;
+  padding: 28px;
+  border-radius: 18px;
+  width: 320px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.login-card h3 {
+  margin: 0;
+  color: #052e26;
+}
+
+.login-card input {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #d1d5db;
+}
+
+.login-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+/* ===================== HERO WRAPPER ===================== */
+.hero-wrapper {
+  padding: 40px 80px 80px;
+}
+
+/* ===================== HERO CARD ===================== */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+
+  max-width: 1100px;
+  margin: 0 auto;
+
+  padding: 50px 60px;
+
+  background: #e9f7f2;
+  border-radius: 22px;
+  border: 1px solid #d3efe6;
+
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
+
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  cursor: pointer;
+}
+
+.hero:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.18);
+}
+
+/* ===================== HERO TEXT ===================== */
+.hero-left {
+  max-width: 520px;
+}
+
+.hero-left h1 {
+  font-size: 48px;
+  line-height: 1.15;
+  margin: 0 0 16px;
+  color: #052e26;
+}
+
+.hero-left h1 span {
+  color: #064e3b;
+}
+
+.hero-left p {
+  font-size: 17px;
+  color: #1f2937;
+  margin-bottom: 28px;
+}
+
+/* ===================== BUTTONS ===================== */
+.hero-buttons {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
+  background: #1ec7a6;
+  color: #052e26;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-secondary {
+  background: white;
+  color: #052e26;
+  border: none;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ===================== HERO IMAGE ===================== */
+.hero-image-wrapper {
+  width: 360px;
+  height: 360px;
+
+  border-radius: 16px;
+  overflow: hidden;
+
+  background: #dff3ec;
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.18);
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* ===================== MISSION SECTION ===================== */
+.mission-section {
+  padding: 100px 100px 120px;   /* spacing instead of line */
+}
+
+.mission-section h2 {
+  font-size: 36px;
+  font-weight: 600;
+  color: #052e26;
+  margin-bottom: 48px;
+}
+
+/* ===================== MISSION CARDS ===================== */
+.mission-cards {
+  display: flex;
+  gap: 32px;
+}
+
+.mission-card {
+  flex: 1;
+  padding: 32px;
+  border-radius: 22px;
+
+  background: linear-gradient(
+    135deg,
+    #1ec7a6,
+    #2bb0b8
+  );
+
+  color: white;
+
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.12);
+
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  cursor: pointer;
+}
+
+.mission-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.22);
+}
+
+/* ICON */
+.mission-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 14px;
+
+  background: rgba(255, 255, 255, 0.2);
+
+  display: grid;
+  place-items: center;
+
+  font-size: 26px;
+  margin-bottom: 18px;
+}
+
+.mission-card h3 {
+  margin: 0 0 10px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.mission-card p {
+  font-size: 16px;
+  line-height: 1.6;
+  opacity: 0.95;
+}
+
+/* ===================== FEATURES SECTION ===================== */
+.features-section {
+  padding: 100px 100px 120px;
+}
+
+.features-section h2 {
+  font-size: 36px;
+  color: #052e26;
+  margin-bottom: 50px;
+}
+
+/* GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+/* FEATURE CARD BASE */
+.feature-card {
+  padding: 32px;
+  border-radius: 22px;
+  color: #052e26;
+
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 32px 64px rgba(0, 0, 0, 0.22);
+}
+
+/* ICON */
+.feature-icon {
+  font-size: 26px;
+  display: inline-block;
+  margin-bottom: 14px;
+}
+
+/* TEXT */
+.feature-card h3 {
+  margin: 0 0 8px;
+  font-size: 20px;
+}
+
+.feature-card p {
+  font-size: 16px;
+  color: #1f2937;
+}
+
+/* ===================== COLOR VARIANTS ===================== */
+.feature-card.green {
+  background: linear-gradient(135deg, #dff7ef, #bff0e2);
+}
+
+.feature-card.teal {
+  background: linear-gradient(135deg, #d6f5f2, #b3ecec);
+}
+
+.feature-card.blue {
+  background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+}
+
+.feature-card.mint {
+  background: linear-gradient(135deg, #ecfdf5, #bbf7d0);
+}
+
+.feature-card.rose {
+  background: linear-gradient(135deg, #ffe4e6, #fecdd3);
+}
+
+.feature-card.slate {
+  background: linear-gradient(135deg, #f1f5f9, #e2e8f0);
+}
+@media (max-width: 1100px) {
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 700px) {
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* ===================== SIDEBAR OVERLAY ===================== */
+.sidebar-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 2000;
+}
+
+/* ===================== SIDEBAR ===================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 300px;
+  height: 100vh;
+
+  background: #f6fffc;
+  padding: 32px 24px;
+
+  box-shadow: 20px 0 40px rgba(0, 0, 0, 0.25);
+
+  transform: translateX(-100%);
+  animation: slideIn 0.35s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.sidebar-title {
+  text-align: center;
+  margin-bottom: 28px;
+  color: #052e26;
+}
+
+/* ITEMS */
+.sidebar-item {
+  background: white;
+  border-radius: 16px;
+  padding: 16px 18px;
+  margin-bottom: 14px;
+
+  font-size: 16px;
+  font-weight: 500;
+  color: #052e26;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.sidebar-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.18);
+}
+
+.sidebar-item.highlight {
+  color: #1ec7a6;
+}
+
+/* CLOSE BUTTON */
+.sidebar-close {
+  margin-top: 22px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+
+  background: linear-gradient(180deg, #0f766e, #064e3b);
+  color: white;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+/* ===================== ANIMATION ===================== */
+@keyframes slideIn {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+.aqi-chat {
+  max-width: 600px;
+  margin: 80px auto;
+  padding: 30px;
+  background: #f6fffc;
+  border-radius: 18px;
+}
+
+.aqi-chat textarea {
+  width: 100%;
+  height: 100px;
+  padding: 12px;
+  border-radius: 10px;
+  border: 1px solid #d1d5db;
+}
+
+.chat-answer {
+  margin-top: 20px;
+  background: white;
+  padding: 16px;
+  border-radius: 12px;
+}
+
+/* ===================== HEALTH CHAT MODAL ===================== */
+.healthchat-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: grid;
+  place-items: center;
+  z-index: 3000;
+}
+
+.healthchat-card {
+  width: 520px;
+  max-width: 90%;
+  background: #f6fffc;
+  padding: 28px;
+  border-radius: 22px;
+
+  box-shadow: 0 30px 70px rgba(0, 0, 0, 0.35);
+}
+
+.healthchat-card h2 {
+  margin-top: 0;
+  color: #052e26;
+}
+
+.healthchat-card textarea {
+  width: 100%;
+  height: 120px;
+  margin: 16px 0;
+  padding: 14px;
+  border-radius: 14px;
+  border: 1px solid #d1d5db;
+  font-size: 15px;
+}
+
+.healthchat-answer {
+  margin-top: 18px;
+  background: white;
+  padding: 16px;
+  border-radius: 14px;
+  max-height: 220px;
+  overflow-y: auto;
+}
+
+.healthchat-close {
+  margin-top: 18px;
+  width: 100%;
+  padding: 14px;
+  border-radius: 999px;
+  border: none;
+  background: #e5e7eb;
+  cursor: pointer;
+}

@@ -1,0 +1,15 @@
+.sidebar {
+  width: 70px;
+  height: 70px;
+  background: linear-gradient(135deg, #2fd4b8, #1fa89a);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px;
+}
+
+.menu-icon {
+  font-size: 26px;
+  color: white;
+}
